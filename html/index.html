@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Manufactored solutions to the 2D time-dependent heat equation &mdash; manusols-4-heateqn with fenics and scipy 1.0.0 documentation</title>
+    <title>Manufactured solutions to the 2D time-dependent heat equation &mdash; manusols-4-heateqn with fenics and scipy 1.0.0 documentation</title>
     
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -51,15 +51,15 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="manufactored-solutions-to-the-2d-time-dependent-heat-equation">
-<h1>Manufactored solutions to the 2D time-dependent heat equation<a class="headerlink" href="#manufactored-solutions-to-the-2d-time-dependent-heat-equation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="manufactured-solutions-to-the-2d-time-dependent-heat-equation">
+<h1>Manufactured solutions to the 2D time-dependent heat equation<a class="headerlink" href="#manufactured-solutions-to-the-2d-time-dependent-heat-equation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="using-sympy-fenics-and-scipy">
 <h2>using sympy, fenics and scipy<a class="headerlink" href="#using-sympy-fenics-and-scipy" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>This module can be used to test time integration schemes, that are implemented, e.g., in scipy, via the technique of manufactured solutions. This means that one considers a PDE (here the 2D time dependent heat equation), makes up a solution, computes a spatial discretization and the associated right hand side, and uses this right hand side to numerically compute solutions to the actual system. Thus, the solution is known and one can test the scheme for convergence and performance.</p>
-<p>We use <cite>sympy</cite> to provide symbolic representations of the solution and the right hand sides.</p>
+<p>We use <cite>sympy</cite> for symbolic representations of the solution and the right hand sides.</p>
 <p>We use <cite>FEniCs</cite> for the spatial discretization and computation of the errors.</p>
-<p>And this module, that provides the coefficient matrices in <cite>scipy</cite>&#8216;s csr matrix format and right hand sides ready for use in time integration schemes.</p>
+<p>This module provides the coefficient matrices in <cite>scipy</cite>&#8216;s csr matrix format and right hand sides ready for use in time integration schemes.</p>
 <p>An instance of the main class as attributes the scipy sparse matrices <cite>M</cite>, <cite>A</cite> representing the mass and the stiffness matrix of the problem on the <strong>inner</strong> nodes and methods that return the right hand side of the discrete system, the exact solution, and the error at a given time instance (and for a given approximate solution).</p>
 </div></blockquote>
 <p>Contents:</p>
@@ -87,7 +87,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Manufactored solutions to the 2D time-dependent heat equation</a><ul>
+<li><a class="reference internal" href="#">Manufactured solutions to the 2D time-dependent heat equation</a><ul>
 <li><a class="reference internal" href="#using-sympy-fenics-and-scipy">using sympy, fenics and scipy</a><ul>
 </ul>
 </li>
