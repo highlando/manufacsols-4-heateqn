@@ -5,7 +5,7 @@
 
 Manufactured solutions to the 2D time-dependent heat equation
 =============================================================
-using sympy, fenics and scipy
+using sympy, FEniCS and scipy
 -----------------------------
     The **method of manufactured solutions** is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this `SANDIA report <http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf>`_ for a thorough introduction.
    
@@ -13,7 +13,7 @@ using sympy, fenics and scipy
 
     It uses `sympy` for symbolic representations of the solution and the source term. 
 
-    It uses `FEniCs` for the spatial discretization, for the projections,  and for the computation of the errors.
+    It uses `FEniCS` for the spatial discretization, for the projections,  and for the computation of the errors.
 
     The attributes, the scipy sparse matrices `M`, `A`,  represent the mass and the stiffness matrix of the problem on the **inner** nodes, i.e. that the boundary values are resolved in the source term. Thus, the time discretization is ready for the implementation of, e.g., Runge-Kutta methods for the time integration.
 

@@ -54,12 +54,12 @@
   <div class="section" id="manufactured-solutions-to-the-2d-time-dependent-heat-equation">
 <h1>Manufactured solutions to the 2D time-dependent heat equation<a class="headerlink" href="#manufactured-solutions-to-the-2d-time-dependent-heat-equation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="using-sympy-fenics-and-scipy">
-<h2>using sympy, fenics and scipy<a class="headerlink" href="#using-sympy-fenics-and-scipy" title="Permalink to this headline">¶</a></h2>
+<h2>using sympy, FEniCS and scipy<a class="headerlink" href="#using-sympy-fenics-and-scipy" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The <strong>method of manufactured solutions</strong> is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this <a class="reference external" href="http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf">SANDIA report</a> for a thorough introduction.</p>
 <p>We consider the time dependent heat equation. This module provides a class that has the mass and stiffness matrix as attributes and that comes with methods that provides the source term, the analytical solution projected to the discrete space, and the error between a discrete and the analytical solution.</p>
 <p>It uses <cite>sympy</cite> for symbolic representations of the solution and the source term.</p>
-<p>It uses <cite>FEniCs</cite> for the spatial discretization, for the projections,  and for the computation of the errors.</p>
+<p>It uses <cite>FEniCS</cite> for the spatial discretization, for the projections,  and for the computation of the errors.</p>
 <p>The attributes, the scipy sparse matrices <cite>M</cite>, <cite>A</cite>,  represent the mass and the stiffness matrix of the problem on the <strong>inner</strong> nodes, i.e. that the boundary values are resolved in the source term. Thus, the time discretization is ready for the implementation of, e.g., Runge-Kutta methods for the time integration.</p>
 <p>Get started with <cite>run test_impeul_int</cite> in a python shell to plot some error of the Implicit Euler method for various time resolutions.</p>
 </div></blockquote>
@@ -89,7 +89,7 @@
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Manufactured solutions to the 2D time-dependent heat equation</a><ul>
-<li><a class="reference internal" href="#using-sympy-fenics-and-scipy">using sympy, fenics and scipy</a><ul>
+<li><a class="reference internal" href="#using-sympy-fenics-and-scipy">using sympy, FEniCS and scipy</a><ul>
 </ul>
 </li>
 </ul>
