@@ -52,7 +52,8 @@ def test_impeul_int():
     print 'Number of timesteps, global error'
     for Nts in Ntslist:
         tau = (tE-t0)/Nts
-        curl_A = prob.M - tau * prob.A
+        curl_A = prob.M + tau * prob.A
+        # note that A represents -div(k grad) 
         for tcur in np.linspace(t0+tau, tE, Nts-1):
 
             f_st = prob.M * u_old + tau * prob.currhs(tcur)
@@ -110,7 +111,7 @@ class ProbFenicsNumpiHeat2d(object):
         
         # Assemble system
         M = assemble(inner(u, v)*dx)
-        A = assemble((-1) * kappa * inner(grad(u), grad(v)) * dx)
+        A = assemble(kappa * inner(grad(u), grad(v)) * dx)
         # Convert DOLFIN representation to numpy arrays
         rows, cols, values = M.data()
         self.M = sps.csr_matrix((values, cols, rows))
@@ -118,7 +119,7 @@ class ProbFenicsNumpiHeat2d(object):
         rows, cols, values = A.data()
         self.A = sps.csr_matrix((values, cols, rows))
         """csr matrix representing the weak discrete 
-        :math:`\\nabla \\cdot (\\kappa \\nabla )` operator"""
+        :math:`-\\nabla \\cdot (\\kappa \\nabla )` operator"""
             
 
         # treatment of the boundary values
