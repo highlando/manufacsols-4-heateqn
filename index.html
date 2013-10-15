@@ -56,7 +56,7 @@
 <div class="section" id="using-sympy-fenics-and-scipy">
 <h2>using sympy, fenics and scipy<a class="headerlink" href="#using-sympy-fenics-and-scipy" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The <strong>method of manufactored solutions</strong> is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this [SANDIA report](<a class="reference external" href="http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf">http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf</a>) for a thorough introduction.</p>
+<div><p>The <strong>method of manufactored solutions</strong> is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this <cite>Link SANDIA report &lt;http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf&gt;</cite> for a thorough introduction.</p>
 <p>We consider the time dependent heat equation. This module provides a class that has the mass and stiffness matrix as attributes and that comes with methods that provides the source term, the analytical solution projected to the discrete space, and the error between a discrete and the analytical solution.</p>
 <p>It uses <cite>sympy</cite> for symbolic representations of the solution and the source term.</p>
 <p>It uses <cite>FEniCs</cite> for the spatial discretization, for the projections,  and for the computation of the errors.</p>
