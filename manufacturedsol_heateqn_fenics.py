@@ -13,9 +13,7 @@ def tran_heat_eq2d(omega=1):
 
     :param omega: Parameter for the frequency. Defaults to 1
 
-    :return: 
-
-    A symbolic expression of a scalar function depending on the space variables `x` (internal name is `x[0]`) and `y` (internal name is `x[1]`) and the time variable `t`
+    :return: A symbolic expression of a scalar function depending on the space variables `x` (internal name is `x[0]`) and `y` (internal name is `x[1]`) and the time variable `t`
 
     """
     x, y, t = smp.symbols('x[0], x[1], t')
@@ -145,16 +143,14 @@ class ProbFenicsNumpiHeat2d(object):
         self.bcvals = auxu[self.bcinds]
 
     def currhs(self, tcur):
-        """Compute the current right-hand side
+        """Compute the current source term 
         
-        containing the actual rhs of the system plus the 
+        containing the actual source of the system plus the 
         contribution from the Dirichlet boundary data
 
         :param tcur: current time
 
-        :return:
-
-        Vector of the current rhs
+        :return: Vector of the current rhs
 
         """
         self.rhs.t = tcur
@@ -166,11 +162,10 @@ class ProbFenicsNumpiHeat2d(object):
     def cursolprjtd(self, tcur):
         """ Get the current solution projected onto the 
         FEM space
-        :param tcur: current
 
-        :return:
+        :param tcur: current time
 
-        vector of the current projected solution
+        :return: vector of the current projected solution
 
         """
         self.sol.t = tcur
@@ -185,9 +180,7 @@ class ProbFenicsNumpiHeat2d(object):
 
         :param uvec: vector of a current solution approximation
 
-        :return:
-
-        fenics function containing the values of `uvec` and the Dirichlet data
+        :return: fenics function containing the values of `uvec` and the Dirichlet data
 
         """
 
@@ -208,9 +201,7 @@ class ProbFenicsNumpiHeat2d(object):
         :param uvec: vector of solution approximation
         :param tcur: current time 
 
-        :return:
-
-        the approximation error 
+        :return: the approximation error 
 
         """
 
