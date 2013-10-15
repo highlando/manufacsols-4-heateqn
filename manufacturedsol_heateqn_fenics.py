@@ -90,7 +90,7 @@ class ProbFenicsNumpiHeat2d(object):
 
     :param symbsol: a symbolic expression with parameters `t,x,y` with internal names `x[0], x[1], t`
     :param V: FeNiCs functionspace on a 2D mesh
-    :param kappa: diffusion coefficient: may be a constant value or a fenics expression in `x[0]` and `x[1]`. Defaults to 1
+    :param kappa: diffusion coefficient: may be a constant value or a FEniCS expression in `x[0]` and `x[1]`. Defaults to 1
 
 
     """
@@ -181,7 +181,7 @@ class ProbFenicsNumpiHeat2d(object):
 
         :param uvec: vector of a current solution approximation
 
-        :return: fenics function containing the values of `uvec` and the Dirichlet data
+        :return: FEniCS function containing the values of `uvec` and the Dirichlet data
 
         """
 
