@@ -23,7 +23,7 @@ def tran_heat_eq2d(omega=1):
     symb_sol = time_dep * smp.exp(x)*x*x*2*y*(1-y)*(2*y-1)
     return symb_sol
 
-def test_time_ints():
+def test_impeul_int():
     """ Example for the test of convergence of Implicit Euler
     """
 
@@ -221,5 +221,5 @@ class ProbFenicsNumpiHeat2d(object):
 
 
 if __name__ == '__main__':
-    test_time_ints()
+    test_impeul_int()
 

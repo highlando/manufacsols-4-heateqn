@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = _build
+BUILDDIR      = ~/work/code/miscndocs/mfs4hteq_html
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
