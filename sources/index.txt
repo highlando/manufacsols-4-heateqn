@@ -7,7 +7,7 @@ Manufactured solutions to the 2D time-dependent heat equation
 =============================================================
 using sympy, fenics and scipy
 -----------------------------
-    The **method of manufactored solutions** is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this `Link SANDIA report <http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf>` for a thorough introduction.
+    The **method of manufactored solutions** is a way to test numerical code. It considers a PDE, takes an analytical solution, and computes the source term by plugging the solution into the PDE. Then, using the source term, a numerical solution is computed and compared against the analytical. See this `Link SANDIA report <http://prod.sandia.gov/techlib/access-control.cgi/2000/001444.pdf>`_ for a thorough introduction.
    
     We consider the time dependent heat equation. This module provides a class that has the mass and stiffness matrix as attributes and that comes with methods that provides the source term, the analytical solution projected to the discrete space, and the error between a discrete and the analytical solution. 
 
